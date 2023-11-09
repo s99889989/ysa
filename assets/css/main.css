@@ -6,7 +6,7 @@
 .container-top{
     padding-top: 65px;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh + 65px);
 }
 .navbar-top{
     position: fixed;
@@ -20,7 +20,7 @@
         box-sizing: border-box;
         padding-top: 70px;
         width: 100%;
-        min-height: 100vh;
+        min-height: calc(100vh + 70px);
     }
     /*.navbar-top{*/
     /*    position: fixed;*/
