@@ -83,7 +83,7 @@ onMounted(()=>{
 <style scoped>
 .them{
 
-  //display: block;
+  display: none;
 }
 
 
@@ -91,7 +91,7 @@ onMounted(()=>{
   .them{
 
 
-    display: none;
+    display: block;
   }
 }
 </style>
