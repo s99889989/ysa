@@ -8,8 +8,9 @@
     width: 100%;
 }
 .navbar-top{
-    /*position: fixed;*/
-    /*width: 100%;*/
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -20,12 +21,12 @@
         width: 100%;
 
     }
-    .navbar-top{
-        /*position: fixed;*/
-        /*box-sizing: border-box;*/
-        /*width: 100%;*/
+    /*.navbar-top{*/
+    /*    position: fixed;*/
+    /*    box-sizing: border-box;*/
+    /*    width: 100%;*/
 
-    }
+    /*}*/
 }
 
 
