@@ -17,12 +17,12 @@
     .container-top{
         box-sizing: border-box;
         padding-top: 65px;
-        width: 100%;
+        width: 95%;
 
     }
     .navbar-top{
         box-sizing: border-box;
-        width: 100%;
+        width: 95%;
 
     }
 }
