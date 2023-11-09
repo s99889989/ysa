@@ -4,6 +4,24 @@ import { initFlowbite } from 'flowbite'
 onMounted(() => {
   initFlowbite();
 })
+
+const hidden_dropdown = () => {
+  const dropdown_name_list = ref(['navbar-solid-bg' ,'ysa-2022', "ysa-2022-3", "ysa-2022-4", "ysa-2023", "ysa-2023-1", "ysa-2023-2", "ysa-2023-3"])
+  dropdown_name_list.value.forEach(dropdown_id=>{
+    let dropdown = document.getElementById(dropdown_id);
+    if(dropdown != null){
+      if(!dropdown.classList.contains('hidden')){
+        dropdown.classList.add('hidden')
+      }
+    }
+
+  })
+
+
+
+
+}
+
 </script>
 
 <template>
@@ -43,12 +61,12 @@ onMounted(() => {
                   </svg></button>
                   <div id="ysa-2022-3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                      <li><NuxtLink to="/young_single_adults/2022/3/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/3/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/3/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/3/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/3/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/3/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/3/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/3/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/3/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/3/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/3/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/3/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
                     </ul>
                   </div>
                 </li>
@@ -60,12 +78,12 @@ onMounted(() => {
                   </svg></button>
                   <div id="ysa-2022-4" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                      <li><NuxtLink to="/young_single_adults/2022/4/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/4/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/4/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/4/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/4/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2022/4/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/4/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/4/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/4/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/4/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/4/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2022/4/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
                     </ul>
                   </div>
                 </li>
@@ -90,12 +108,12 @@ onMounted(() => {
                   </svg></button>
                   <div id="ysa-2023-1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                      <li><NuxtLink to="/young_single_adults/2023/1/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/1/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/1/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/1/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/1/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/1/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/1/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/1/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/1/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/1/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/1/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/1/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
                     </ul>
                   </div>
                 </li>
@@ -107,12 +125,12 @@ onMounted(() => {
                   </svg></button>
                   <div id="ysa-2023-2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                      <li><NuxtLink to="/young_single_adults/2023/2/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/2/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/2/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/2/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/2/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/2/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/2/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/2/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/2/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/2/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/2/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/2/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
                     </ul>
                   </div>
                 </li>
@@ -124,12 +142,12 @@ onMounted(() => {
                   </svg></button>
                   <div id="ysa-2023-3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                      <li><NuxtLink to="/young_single_adults/2023/3/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/3/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/3/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/3/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/3/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/3/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/3/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/3/photo_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/3/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/3/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/3/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2023/3/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
                     </ul>
                   </div>
                 </li>
