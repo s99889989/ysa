@@ -8,8 +8,8 @@
     width: 100%;
 }
 .navbar-top{
-
-    width: 100%;
+    /*position: fixed;*/
+    /*width: 100%;*/
 }
 
 
@@ -17,12 +17,13 @@
     .container-top{
         box-sizing: border-box;
         padding-top: 65px;
-        width: 95%;
+        width: 100%;
 
     }
     .navbar-top{
-        box-sizing: border-box;
-        width: 95%;
+        /*position: fixed;*/
+        /*box-sizing: border-box;*/
+        /*width: 100%;*/
 
     }
 }
