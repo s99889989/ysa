@@ -5,14 +5,27 @@
 
 .container-top{
    padding-top: 70px;
+    width: 100%;
+}
+.navbar-top{
 
+    width: 100%;
 }
 
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .container-top{
+        box-sizing: border-box;
         padding-top: 65px;
+        width: 100%;
 
+    }
+    .navbar-top{
+        box-sizing: border-box;
+        width: 100%;
 
     }
 }
+
+
+
