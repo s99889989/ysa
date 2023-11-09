@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-const path = ref(['video', '2023', '第2回', '第3天', 'config'])
+const path = ref(['video', '2023', '第2回', '第3天'])
 const title = ref('2022-第2回-第3天-影片')
 
 </script>

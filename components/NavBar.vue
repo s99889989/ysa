@@ -65,7 +65,7 @@ onMounted(() => {
                       <li><NuxtLink to="/young_single_adults/2022/4/photo_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-照片</NuxtLink></li>
                       <li><NuxtLink to="/young_single_adults/2022/4/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
                       <li><NuxtLink to="/young_single_adults/2022/4/video_2" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第2天-影片</NuxtLink></li>
-                      <li><NuxtLink to="/young_single_adults/2023/3/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
+                      <li><NuxtLink to="/young_single_adults/2022/4/video_3" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第3天-影片</NuxtLink></li>
                     </ul>
                   </div>
                 </li>
