@@ -22,8 +22,8 @@ const hidden_dropdown = () => {
 </script>
 
 <template>
-
-  <nav class="navbar-top border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0">
+<!--  <nav class="fixed w-full navbar-top border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">-->
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <NuxtLink to="/" class="flex items-center">
         <img src="/logo.png" class="h-8 mr-3" alt="Flowbite Logo" />
