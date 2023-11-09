@@ -1,7 +1,5 @@
 <script setup lang="ts">
-onMounted(()=>{
-  window.open('https://venerable-lebkuchen-7923e4.netlify.app/', '_blank');
-})
+
 
 </script>
 
