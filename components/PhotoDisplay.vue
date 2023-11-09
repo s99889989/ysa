@@ -20,7 +20,7 @@ const photos = reactive({
 onMounted(()=>{
   const pathList = props.path;
   // const url = 'https://localhost:9100/image/'+pathList.join(',');
-  const url = 'https://madustrialtd.asuscomm.com:9100/image/'+pathList.join(',');
+  const url = 'https://madustrialtd.asuscomm.com:9100/ysa/image/'+pathList.join(',');
 
   fetch(url)
       .then(res=>res.json())

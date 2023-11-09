@@ -20,7 +20,7 @@ const videos = reactive({
 onMounted(()=>{
   const pathList = props.path;
   // const url = 'http://localhost:9100/video/'+pathList.join(',');
-  const url = 'https://madustrialtd.asuscomm.com:9100/video/'+pathList.join(',');
+  const url = 'https://madustrialtd.asuscomm.com:9100/ysa/video/'+pathList.join(',');
   fetch(url)
       .then(res=>res.json())
       .then(data=>{

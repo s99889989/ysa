@@ -6,8 +6,6 @@
 .container-top{
    padding-top: 70px;
 
-    /*min-height: calc(100vh - 70px);*/
-    /*max-height: calc(100% - 70px);*/
 }
 
 
@@ -15,26 +13,6 @@
     .container-top{
         padding-top: 65px;
 
-        /*min-height: calc(100vh - 65px);*/
-        /*height: calc(100% - 65px);*/
-
-    }
-}
-
-.container-sidebar-top{
-    margin-top: 73px;
-
-    min-height: calc(100vh - 70px);
-    max-height: calc(100% - 70px);
-}
-
-
-@media (min-width: 768px) {
-    .container-sidebar-top{
-        margin-top: 69px;
-
-        min-height: calc(100vh - 65px);
-        height: calc(100% - 65px);
 
     }
 }
