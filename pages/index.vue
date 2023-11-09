@@ -1,11 +1,14 @@
 <script setup lang="ts">
+onMounted(()=>{
+  window.open('https://venerable-lebkuchen-7923e4.netlify.app/', '_blank');
+})
 
 </script>
 
 <template>
   <div id="main" class="dark:bg-black flex min-h-screen w-full flex-col items-center justify-center bg-white">
     <h1 class="text-6xl dark:text-white font-semibold text-sky-400">2023</h1>
-    <p class="mt-4 text-9xl dark:text-white font-bold text-gray-600">Young Single Adults</p>
+    <p class="mt-4 text-8xl dark:text-white font-bold text-gray-600">單身成人大會</p>
   </div>
 
 </template>
