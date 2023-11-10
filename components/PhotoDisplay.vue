@@ -19,10 +19,15 @@ const photos = reactive({
 })
 onMounted(()=>{
   const pathList = props.path;
-  // const url = 'https://localhost:9100/image/'+pathList.join(',');
-  const url = 'https://madustrialtd.asuscomm.com:9100/ysa/image/'+pathList.join(',');
-
-  fetch(url)
+  // const url = 'https://localhost:9100/ysa/image';
+  const url = 'https://madustrialtd.asuscomm.com:9100/ysa/image';
+  fetch(url,{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(pathList)
+  })
       .then(res=>res.json())
       .then(data=>{
         photos.data = data;
