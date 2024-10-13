@@ -13,7 +13,8 @@ const props = defineProps({
 const photos = reactive({
   data: [
     {
-      image: ''
+      image: '',
+      panoramic: false
     }
   ],
 })
@@ -31,22 +32,54 @@ onMounted(()=>{
       .then(res=>res.json())
       .then(data=>{
         photos.data = data;
+
+        nextTick(() => {
+          photos.data.forEach(item => {
+            console.log(item.image + ' : ' + item.panoramic);
+            if (item.panoramic) {
+              // 確保元素已渲染到 DOM 中，然後初始化 Pannellum
+              pannellum.viewer('panorama-' + item.image, {
+                type: 'equirectangular',
+                panorama: 'https://madustrialtd.asuscomm.com:9100/' + item.image,
+                autoLoad: true,
+                autoRotate: -2,
+              });
+            }
+          });
+        });
+
+
+
       })
 
-
 })
-
 
 </script>
 
 <template>
-  <div class="dark:bg-black p-4 bg-white min-h-screen container-top">
-    <p class="dark:text-white text-2xl text-black text-center">{{props.title}}</p>
-    <div class="grid grid-cols-1 lg:grid-cols-2">
-      <div class="flex flex-wrap justify-center p-4" v-for="item in photos.data">
+<!--  <div class="dark:bg-black p-4 bg-white min-h-screen container-top">-->
+<!--    <p class="dark:text-white text-2xl text-black text-center">{{props.title}}</p>-->
+<!--    <div class="grid grid-cols-1 lg:grid-cols-2">-->
+<!--      <div class="flex flex-wrap justify-center p-4" v-for="item in photos.data">-->
 
-        <!--        <img class="object-contain w-full" :src="'https://localhost:9100/'+item.image" alt="">-->
-        <img class="object-contain w-full" :src="'https://madustrialtd.asuscomm.com:9100/'+item.image" alt="">
+<!--        &lt;!&ndash;        <img class="object-contain w-full" :src="'https://localhost:9100/'+item.image" alt="">&ndash;&gt;-->
+<!--        <img class="object-contain w-full" :src="'https://madustrialtd.asuscomm.com:9100/'+item.image" alt="">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+  <div class="dark:bg-black p-4 bg-white min-h-screen container-top">
+    <p class="dark:text-white text-2xl text-black text-center">{{ props.title }}</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="flex flex-wrap justify-center p-4" v-for="item in photos.data" :key="item.image">
+        <!-- 判斷是否為全景圖 -->
+        <div v-if="item.panoramic" class="w-full">
+          <!-- Pannellum 显示全景图 -->
+          <div :id="'panorama-' + item.image" class="w-full h-96"></div>
+        </div>
+        <div v-else>
+          <!-- 一般图片显示 -->
+          <img class="object-contain w-full" :src="'https://madustrialtd.asuscomm.com:9100/' + item.image" alt="">
+        </div>
       </div>
     </div>
   </div>

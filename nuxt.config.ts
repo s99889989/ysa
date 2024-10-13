@@ -28,6 +28,10 @@ export default defineNuxtConfig({
         {
           href: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css",
           rel: "stylesheet"
+        },
+        {
+          rel: "stylesheet",
+          href: "https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"
         }
       ],
       script: [
@@ -40,6 +44,9 @@ export default defineNuxtConfig({
         {
           src: "https://kit.fontawesome.com/168d3a888b.js",
           crossorigin: "anonymous"
+        },
+        {
+          src: "https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"
         },
       ]
     }

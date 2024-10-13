@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
+</head>
+<body>
+<div id="panorama" style="width: 600px; height: 400px;"></div>
+<script>
+    pannellum.viewer('panorama', {
+        "type": "equirectangular",
+        "panorama": "http://localhost:63342/ysa/assets/IMG_20241010_110336_00_002.jpg",
+        "autoLoad": true,
+        "autoRotate": -2
+    });
+</script>
+</body>
+</html>
