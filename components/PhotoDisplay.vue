@@ -35,13 +35,14 @@ onMounted(()=>{
 
         nextTick(() => {
           photos.data.forEach(item => {
-            console.log(item.image + ' : ' + item.panoramic);
+            // console.log(item.image + ' : ' + item.panoramic);
             if (item.panoramic) {
               // 確保元素已渲染到 DOM 中，然後初始化 Pannellum
+
               pannellum.viewer('panorama-' + item.image, {
                 type: 'equirectangular',
                 panorama: 'https://madustrialtd.asuscomm.com:9100/' + item.image,
-                autoLoad: true,
+                autoLoad: false,
                 autoRotate: -2,
               });
             }
