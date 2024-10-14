@@ -7,7 +7,7 @@ const title = ref('2024-第2回-第3天-影片')
 
 <template>
 
-  <VideoDisplay  :path="path" :title="title" />
+  <VideoDisplay2  :path="path" :title="title" />
 
 </template>
 

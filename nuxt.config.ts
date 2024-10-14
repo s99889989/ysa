@@ -48,6 +48,9 @@ export default defineNuxtConfig({
         {
           src: "https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"
         },
+        {
+          src: "https://www.instagram.com/embed.js"
+        }
       ]
     }
   }
