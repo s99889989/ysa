@@ -77,20 +77,6 @@ onMounted(() => {
   fetchTotalPages();
   fetchImages(currentPage.value);
 });
-
-const loadImage = (event: Event) => {
-  const img = event.target as HTMLImageElement;
-  const actualSrc = img.dataset.src;  // 取得高解析度圖片 URL
-
-  // 創建新的圖片來加載高解析度版本
-  const highResImg = new Image();
-  highResImg.src = actualSrc;
-  highResImg.onload = () => {
-    img.src = actualSrc;  // 替換為高解析度圖片
-    img.classList.add('fade-in');  // 添加淡入效果
-  };
-}
-
 </script>
 
 <template>
@@ -132,13 +118,7 @@ const loadImage = (event: Event) => {
           <div :id="'panorama-' + item.image" class="w-full h-96"></div>
         </div>
         <div v-else>
-          <img
-              class="object-contain w-full placeholder"
-              src="../assets/image.png"
-              :data-src="'https://madustrialtd.asuscomm.com:9100/' + item.image"
-              alt="Loading..."
-              @load="loadImage($event)"
-          >
+          <img class="object-contain w-full" :src="'https://madustrialtd.asuscomm.com:9100/' + item.image" alt="">
         </div>
       </div>
     </div>

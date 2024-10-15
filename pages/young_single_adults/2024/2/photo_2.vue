@@ -7,7 +7,7 @@ const title = ref('2024-第2回-第2天-照片')
 </script>
 
 <template>
-  <PhotoDisplay2 :path="path" :title="title" />
+  <PhotoDisplay :path="path" :title="title" />
 </template>
 
 <style scoped>
