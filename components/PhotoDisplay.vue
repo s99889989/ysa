@@ -12,7 +12,7 @@ const props = defineProps({
 
 const photos = reactive({ data: [] });
 const currentPage = ref(1);
-let totalPages = 1;
+let totalPages = 5;
 
 // 請求數據
 const fetchImages = (page: number = 1) => {
@@ -65,6 +65,15 @@ const fetchTotalPages = () => {
 
 // 切換頁面
 const goToPage = (page: number) => {
+  if(currentPage.value == page){
+    return;
+  }
+  if(page < 1){
+    page = 1;
+  }
+  if(page > totalPages){
+    page = totalPages;
+  }
   if (page >= 1 && page <= totalPages) {
     currentPage.value = page;
     photos.data = {};
@@ -110,7 +119,7 @@ const loadImage = (event: Event) => {
         </li>
 
         <li v-for="page in totalPages" :key="page">
-          <a  @click.prevent="goToPage(page)" :class="page === currentPage ? 'text-blue-600 bg-blue-50' : ''" href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{{ page }}</a>
+          <a  @click.prevent="goToPage(page)" :class="page === currentPage ? 'text-blue-600 bg-blue-50 dark:bg-gray-700 ' : 'text-gray-500 bg-white dark:bg-gray-800  dark:text-gray-400'" href="#" class="flex items-center justify-center px-3 h-8 leading-tight border border-gray-300 hover:bg-gray-100 hover:text-gray-700  dark:border-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">{{ page }}</a>
         </li>
 
         <li>
