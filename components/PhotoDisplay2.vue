@@ -57,7 +57,10 @@ onMounted(() => {
   })
       .then(res => res.json())
       .then(data => {
-        photos.data = data;
+        photos.data = data.sort((a, b) => {
+          return a.panoramic === b.panoramic ? 0 : a.panoramic ? 1 : -1;
+        });
+
 
         nextTick(() => {
           photos.data.forEach(item => {
