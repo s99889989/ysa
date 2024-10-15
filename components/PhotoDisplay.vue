@@ -49,8 +49,6 @@ onMounted(()=>{
           });
         });
 
-
-
       })
 
 })
@@ -58,16 +56,6 @@ onMounted(()=>{
 </script>
 
 <template>
-<!--  <div class="dark:bg-black p-4 bg-white min-h-screen container-top">-->
-<!--    <p class="dark:text-white text-2xl text-black text-center">{{props.title}}</p>-->
-<!--    <div class="grid grid-cols-1 lg:grid-cols-2">-->
-<!--      <div class="flex flex-wrap justify-center p-4" v-for="item in photos.data">-->
-
-<!--        &lt;!&ndash;        <img class="object-contain w-full" :src="'https://localhost:9100/'+item.image" alt="">&ndash;&gt;-->
-<!--        <img class="object-contain w-full" :src="'https://madustrialtd.asuscomm.com:9100/'+item.image" alt="">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
   <div class="dark:bg-black p-4 bg-white min-h-screen container-top">
     <p class="dark:text-white text-2xl text-black text-center">{{ props.title }}</p>
     <div class="grid grid-cols-1 lg:grid-cols-2">
