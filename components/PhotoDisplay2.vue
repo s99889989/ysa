@@ -12,7 +12,7 @@
           <!-- 預設佔位圖 -->
           <img
               class="object-contain w-full placeholder"
-              src="../assets/transparent.png"
+              src="../assets/image.png"
           :data-src="'https://madustrialtd.asuscomm.com:9100/' + item.image"
           alt="Loading..."
           @load="loadImage($event)"
