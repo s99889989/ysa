@@ -83,8 +83,10 @@ const goToPage = (page: number) => {
 
 // 頁面加載時初始化
 onMounted(() => {
-  fetchTotalPages();
-  fetchImages(currentPage.value);
+  setTimeout(() => {
+    fetchTotalPages();
+    fetchImages(currentPage.value);
+  }, 10); // 延遲 10 毫秒
 });
 
 const loadImage = (event: Event) => {
