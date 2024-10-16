@@ -12,7 +12,7 @@ const props = defineProps({
 
 const photos = reactive({ data: [] });
 const currentPage = ref(1);
-let totalPages = 5;
+let totalPages = 1;
 
 // 請求數據
 const fetchImages = (page: number = 1) => {
@@ -42,7 +42,7 @@ const initPannellumForPanoramas = () => {
         type: 'equirectangular',
         panorama: 'https://madustrialtd.asuscomm.com:9100/' + item.image,
         autoLoad: false,
-        autoRotate: -2,
+        autoRotate: -1,
       });
     }
   });
@@ -83,10 +83,10 @@ const goToPage = (page: number) => {
 
 // 頁面加載時初始化
 onMounted(() => {
+  fetchTotalPages();
   setTimeout(() => {
-    fetchTotalPages();
     fetchImages(currentPage.value);
-  }, 10); // 延遲 10 毫秒
+  }, 100); // 延遲 10 毫秒
 });
 
 const loadImage = (event: Event) => {
