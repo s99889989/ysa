@@ -213,6 +213,19 @@ const hidden_dropdown = () => {
                   </div>
                 </li>
 
+                <li aria-labelledby="dropdownNavbarLink">
+                  <button id="doubleDropdownButton" data-dropdown-toggle="ysa-2024-3" data-dropdown-placement="right-start" type="button" class="flex text-xl items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    花蓮支聯會<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg></button>
+                  <div id="ysa-2024-3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2024/hualien/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2024/hualien/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
+                    </ul>
+                  </div>
+                </li>
+
               </ul>
             </div>
           </li>
