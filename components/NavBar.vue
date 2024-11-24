@@ -220,8 +220,8 @@ const hidden_dropdown = () => {
                   </svg></button>
                   <div id="ysa-2024-3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2024/hualien/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-照片</NuxtLink></li>
-                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2024/hualien/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">第1天-影片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2024/hualien/photo_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">照片</NuxtLink></li>
+                      <li><NuxtLink @click="hidden_dropdown" to="/young_single_adults/2024/hualien/video_1" class="block text-xl px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">影片</NuxtLink></li>
                     </ul>
                   </div>
                 </li>
